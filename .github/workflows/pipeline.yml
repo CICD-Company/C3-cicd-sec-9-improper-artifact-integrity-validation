@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Download external artifact
         run: |
-          curl -o tool.sh https://github.com/CICD-Company/Artifact/blob/main/tool.sh
+          curl -o tool.sh https://raw.githubusercontent.com/CICD-Company/Artifact/refs/heads/main/tool.sh
 
       - name: Execute artifact
         run: |
