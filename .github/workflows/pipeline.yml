@@ -1,0 +1,17 @@
+name: Improper Artifact and Integrity Validation
+
+on:
+  push:
+
+jobs:
+  run-tool:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download external artifact
+        run: |
+          curl -o tool.sh https://github.com/CICD-Company/Artifact/tool.sh
+
+      - name: Execute artifact
+        run: |
+          chmod +x tool.sh
+          ./tool.sh
